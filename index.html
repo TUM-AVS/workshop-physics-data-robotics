@@ -9,7 +9,7 @@
 		<title>Data Meets Physics | ICRA 2027 Workshop</title>
 		<meta charset="utf-8" />
 		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
-		<meta name="description" content="ICRA 2027 Workshop: Data Meets Physics. Physics Priors for Robot Learning in the Era of Large Models." />
+		<meta name="description" content="ICRA 2027 Workshop: Data Meets Physics. Physics Priors for Robot Planning and Control in the Era of Large Models." />
 		<link rel="stylesheet" href="assets/css/main.css" />
 		<noscript><link rel="stylesheet" href="assets/css/noscript.css" /></noscript>
 		<style>
@@ -36,7 +36,7 @@
 						</div>
 						<div style="text-align: center; margin-top: 1em;">
 							<h1>Data Meets Physics:<br/>
-								Physics Priors for Robot Learning in the Era of Large Models</h1>
+								Physics Priors for Robot Planning and Control in the Era of Large Models</h1>
 						</div>
 						<p>Workshop at the 2027 IEEE International Conference on Robotics and Automation (ICRA)<br/>
 						<a href="#" class="icon solid solo fa-calendar-alt"><span class="label">Calendar</span></a> May 24&ndash;28, 2027 <br/>
@@ -81,7 +81,7 @@
 													<i class="icon solid fa-atom" style="color: #4a6cf7; font-size: 1.1em;"></i>
 												</div>
 												<div style="flex: 1; margin-left: 0.5em;">
-													<strong style="color: #2d4a96;">The Question:</strong> Is data all we need, or can physics priors complement limited data?
+													<strong style="color: #2d4a96;">The Question:</strong> Is data all we need, or can physics priors complement limited data for robot planning and control?
 												</div>
 											</div>
 											<div style="margin-bottom: 0.8em; color: #333333; display: flex; align-items: flex-start;">
@@ -107,21 +107,19 @@
 								<p>
 									Data-driven learning is transforming robotics, but unlike language and vision, robotics remains fundamentally <strong class="highlight">data-limited</strong>: collecting physical interaction data requires hardware, time, and supervision, and safety limits exploration. At the same time, robot learning is moving toward ever larger, general-purpose models, and substantial resources are being committed to pure data scaling. This raises a fundamental and timely question:
 								</p>
-								<p class="central">Is data all we need, or can physics priors complement limited data for robot learning?</p>
+								<p class="central">Is data all we need, or can physics priors complement limited data for robot planning and control?</p>
 								<p>
-									Rather than advocating for physics-informed robot learning, the workshop will <strong class="highlight">critically examine the evidence for and against it</strong>. Since the impact of physics priors cannot be assessed by a single metric across methods and tasks, every invited speaker and paper author will address the same three questions:
+									The workshop focuses on <strong class="highlight">learning-based robot planning and control</strong>, and asks when physics priors embedded in learned models and policies improve closed-loop behavior. Physics priors range from governing equations (e.g., Euler&ndash;Lagrange dynamics), conservation laws, and symmetries to contact models and physical-consistency properties such as passivity, stability, and actuator limits.
 								</p>
-								<div class="question"><strong>(Q1) Embedded physics priors.</strong> Which physical knowledge, if any, does the method exploit, and at which level of the learning pipeline: inputs and data generation, model architecture, and/or training loss function?</div>
-								<div class="question"><strong>(Q2) Comparative evidence.</strong> Where controlled comparisons are feasible, how does the method perform relative to alternatives that use more or less physical knowledge, under comparable data and computational budgets (e.g., in terms of sample efficiency, generalization, and safety)? Otherwise, what evidence supports the claimed benefits, and what limitations prevent stronger conclusions?</div>
-								<div class="question"><strong>(Q3) Limits and scaling.</strong> How does this comparison change as <em>data scale</em>, <em>model capacity</em>, or <em>computational resources</em> increase, and which other factors, such as the accuracy of the assumed physics priors, affect it?</div>
+								<p>
+									Rather than advocating for physics priors, the workshop <strong class="highlight">critically examines their benefits and limitations</strong> over purely data-driven alternatives. It explores whether embedded physics may compensate for limited data and promote physical admissibility in safety-critical models and policies. It also examines when inaccurate assumptions become restrictive or harmful. Every speaker and paper author will be asked to address three questions:
+								</p>
+								<div class="question"><strong>(Q1) Embedding physics priors.</strong> Which physical assumptions does the method embed in the learned model or policy, and at which level: inputs and data generation, model architecture, or training loss? How do they affect accuracy and data efficiency, and when do inaccurate assumptions become harmful?</div>
+								<div class="question"><strong>(Q2) From models to actions.</strong> Do model-level gains improve closed-loop planning and control? Where comparisons are feasible, how does the method perform against alternatives with weaker, stronger, or no physics priors, under comparable data and computational budgets (e.g., task success, generalization, closed-loop safety)? Otherwise, what evidence supports the claimed benefits, and what limitations remain?</div>
+								<div class="question"><strong>(Q3) Scaling and generalization.</strong> As models and datasets scale, which roles for physics priors remain useful for reliable planning and control, and how does the accuracy of the assumed physics affect them?</div>
 								<p style="margin-top: 1.5em;">
-									Talks and poster clusters follow three settings that form one argument:
+									The invited talks follow the same storyline: from embedding physics priors in learned models (Q1), to using them to plan and control robot actions (Q2), to their role as learning scales (Q3).
 								</p>
-								<ul>
-									<li><strong>(S1)</strong> physics-consistent dynamics learning under data scarcity;</li>
-									<li><strong>(S2)</strong> learning-based planning and control, where physics priors (e.g., dynamics models, energy, or stability properties) shape closed-loop behavior;</li>
-									<li><strong>(S3)</strong> large-scale policies and world models, to examine the role of physics at scale.</li>
-								</ul>
 								<p>
 									The answers to Q1&ndash;Q3, the disagreements and open questions raised at the poster session, and the round-table conclusions will be collected in a <strong class="highlight">position paper</strong>, published online after the workshop. The paper will distinguish findings supported by comparative empirical evidence, context-dependent conclusions and methodological trade-offs, and open questions where the available evidence is insufficient.
 								</p>
@@ -207,7 +205,7 @@
 											<tr>
 												<td>10:30 - 11:00</td>
 												<td>Posters &amp; Coffee Break</td>
-												<td>Question-driven poster session with speaker-led clusters (S1/S2/S3)</td>
+												<td>Question-driven poster session with speaker-led clusters (Q1/Q2/Q3)</td>
 											</tr>
 											<tr>
 												<td>11:00 - 11:25</td>
@@ -217,7 +215,7 @@
 											<tr>
 												<td>11:25 - 12:25</td>
 												<td>Round Table</td>
-												<td><em>Scaling Robot Learning: How Much Do Physics Priors Matter?</em></td>
+												<td><em>Scaling Robot Learning: How Much Do Physics Priors Matter for Planning and Control?</em></td>
 											</tr>
 											<tr>
 												<td>12:25 - 12:30</td>
@@ -230,17 +228,18 @@
 
 								<h3>Question-Driven Poster Session</h3>
 								<p>
-									Accepted posters are grouped by setting (S1&ndash;S3), and each cluster, led by one invited speaker, identifies one key disagreement and one unresolved research question. These become inputs to the round table and the position paper. The assignment of speakers to poster clusters will be announced here in advance.
+									Accepted posters are grouped by their main question (Q1&ndash;Q3), and each cluster, led by one invited speaker, identifies one key disagreement and one unresolved research question. These become inputs to the round table and the position paper. The assignment of speakers to poster clusters will be announced here in advance.
 								</p>
 
-								<h3>Round Table: <em>Scaling Robot Learning: How Much Do Physics Priors Matter?</em></h3>
+								<h3>Round Table: <em>Scaling Robot Learning: How Much Do Physics Priors Matter for Planning and Control?</em></h3>
 								<p>
-									Moderated by Mattia Piccinini, with the five invited speakers and one early-career author among the shortlisted papers. The one-hour debate builds in three stages:
+									Moderated by one of the organizers, with the five invited speakers and one early-career author among the shortlisted papers. The one-hour debate follows Q1&ndash;Q3. Each part starts from the topics of one or two talks, and then involves all panelists:
 								</p>
 								<ol>
-									<li><strong>What does physics buy when data are scarce?</strong> Physics can constrain what a model predicts or how a policy behaves. Which physics priors remain essential when robots move from the lab to the market?</li>
-									<li><strong>Does scale make physics unnecessary, or move it?</strong> At scale, physics may leave the model architecture and reappear in the data, or in physics-informed models that AI agents build and correct from real-world failures.</li>
-									<li><strong>Where should the community invest?</strong> The disagreements from the poster clusters are presented first. Then, each panelist states one bet for the next five years, challenged by audience questions collected via Slido. The session closes with a final vote on the opening poll.</li>
+									<li><strong>Which physics assumptions are worth embedding? (Q1)</strong> Starting from models learned from pixels: which assumptions improve accuracy and data efficiency, and when do wrong ones hurt?</li>
+									<li><strong>Can physics priors make planning and control better and safer? (Q2)</strong> Starting from motion planning and humanoid control: which priors are useful for safe closed-loop behavior, and what evidence shows it?</li>
+									<li><strong>Does scale make physics unnecessary, or move it? (Q3)</strong> Starting from data synthesis and agentic robotics: can physics be learned directly from data? Will agentic robotics make physics priors unnecessary, or will they move to the agentic level?</li>
+									<li><strong>Where should the community invest?</strong> The poster clusters present their disagreements and open questions. Each panelist then states one bet for the next five years (physics priors, data and scale, or both), challenged by Slido questions, before a final vote on the opening poll.</li>
 								</ol>
 								<p>
 									Attendees can post questions and objections on Slido, also anonymously. The talks and the round table will be recorded and made available online.
@@ -255,15 +254,15 @@
 								</header>
 
 								<p>
-									We invite papers that address the questions <strong>Q1&ndash;Q3</strong> above, in any of the three settings:
+									We invite non-archival papers on <strong>learning-based robot planning and control</strong>. Planning includes path, motion, and task planning, and control ranges from whole-body to low-level and actuator control. Papers may:
 								</p>
 								<ul>
-									<li><strong>(S1) Dynamics learning under data scarcity:</strong> physics-consistent, physics-informed, or physics-encoded models of robot dynamics;</li>
-									<li><strong>(S2) Learning-based planning and control:</strong> dynamics models, energy, or stability properties that shape closed-loop behavior;</li>
-									<li><strong>(S3) Large-scale policies and world models:</strong> the role of physics in data generation, foundation models, and learning at scale.</li>
+									<li>embed physics priors in learned models, planners, or policies;</li>
+									<li>analyze the trade-off between physics priors and data;</li>
+									<li>show cases where physics does not help and data-driven learning performs better.</li>
 								</ul>
 								<p>
-									We explicitly welcome <strong>unconventional views and negative results</strong>, including results showing that physics priors do not help, as well as preliminary work.
+									Controversial views, preliminary work, and <strong>negative results</strong> are explicitly welcome. All papers should address the questions <strong>Q1&ndash;Q3</strong> above.
 								</p>
 
 								<h3>Submission Guidelines</h3>
@@ -276,7 +275,7 @@
 
 								<h3>Review and Awards</h3>
 								<p>
-									Each submission will receive at least two reviews. Besides quality, originality, and relevance to Q1&ndash;Q3, reviewers will value papers that provide clear evidence for or against the usefulness of physics priors, for example through comparative evaluations, a discussion of limitations, or results showing that physics does not help, and that are likely to stimulate discussion.
+									Each submission will receive at least two reviews. Besides quality, originality, and relevance to Q1&ndash;Q3, reviewers will value clear evidence for or against physics priors (e.g., comparative evaluations or a discussion of limitations) and papers likely to stimulate discussion.
 								</p>
 								<p>
 									All accepted papers will be presented as posters. Based on the reviews, <strong>5 shortlisted papers</strong> will be selected for 3-minute spotlight talks, and the author of one of them will join the round table. A <strong>Best Paper Award</strong> will be assigned by the program committee based on the reviews and the spotlight presentations.
